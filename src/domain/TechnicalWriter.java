@@ -1,7 +1,6 @@
 package domain;
 /**
- * Клас, що містить інформацію про технічного письменника
- * @author Admin
+ * Технічний письменник
  */
 public class TechnicalWriter extends Artist {
 }
