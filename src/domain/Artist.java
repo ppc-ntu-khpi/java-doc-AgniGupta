@@ -1,5 +1,10 @@
 package domain;
 
+/**
+ * Опис художника
+ * 
+ * @author Патьоха Михайло
+ */
 public class Artist extends Employee {
 
     public Artist(String[] skiils, String name, String jobTitle, int level, String dept) {
@@ -11,7 +16,7 @@ public class Artist extends Employee {
         super();
         this.skiils = skiils;
     }
-    
+
     public Artist() {
         super();
         this.skiils = new String[10];
@@ -19,7 +24,7 @@ public class Artist extends Employee {
 
     @Override
     public String toString() {
-        return super.toString()+"\nSkills: "+getSkills();
+        return super.toString() + "\nSkills: " + getSkills();
     }
 
     private String[] skiils;
@@ -29,12 +34,12 @@ public class Artist extends Employee {
         for (String e : skiils) {
             s = s + e + ", ";
         }
-       s=s.substring(0, s.length() - 2);
+        s = s.substring(0, s.length() - 2);
         return s;
     }
 
     public void setSkills(String[] skills) {
-        this.skiils=skills;
+        this.skiils = skills;
     }
 
     public String[] getSkillsLSist() {

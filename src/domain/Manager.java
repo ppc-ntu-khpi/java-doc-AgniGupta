@@ -1,4 +1,7 @@
 package domain;
+/**
+ * Менеджер
+ */
 public class Manager extends Employee {
 
     public Manager(Employee[] employees, String name, String jobTitle, int level, String dept) {
@@ -20,9 +23,11 @@ public class Manager extends Employee {
         super();
         employees = new Employee[10];
     }
-
+    /**
+     * Робітники менеджера
+     */
     private Employee[] employees;
-
+    
     public String getEmployees() {
         String s = "";
         for (Employee e : employees) {
@@ -31,11 +36,17 @@ public class Manager extends Employee {
         s=s.substring(0, s.length() - 2);
         return s;
     }
-
+    /**
+     * Встановлення робітників
+     * @param employees 
+     */
     public void setEmployees(Employee[] employees) {
         this.employees=employees;
     }
-
+    /**
+     * Повернення робітників
+     * @return 
+     */
     public Employee[] getEmployeesList() {
         return employees;
     }

@@ -1,4 +1,8 @@
 package domain;
+
+/**
+ * Опис Редактора
+ */
 public class Editor extends Artist {
 
     public Editor(boolean electronicEditing, String[] skiils, String name, String jobTitle, int level, String dept) {
@@ -15,7 +19,7 @@ public class Editor extends Artist {
         super();
         this.electronicEditing = electronicEditing;
     }
-    
+
     public Editor() {
         super();
         this.electronicEditing = true;
@@ -23,15 +27,18 @@ public class Editor extends Artist {
 
     @Override
     public String toString() {
-        String s=super.toString()+"\nEditing preferences= "; 
+        String s = super.toString() + "\nEditing preferences= ";
         if (electronicEditing)
-            s=s+"electronic";
+            s = s + "electronic";
         else
-            s=s+"paper";
+            s = s + "paper";
         return s;
-            
+
     }
 
+    /**
+     * true - якщо редактор працює з папером
+     */
     private boolean electronicEditing;
 
     public boolean getPreferences() {
@@ -39,6 +46,6 @@ public class Editor extends Artist {
     }
 
     public void setPreferences(boolean electronic) {
-        this.electronicEditing=electronic;
+        this.electronicEditing = electronic;
     }
 }
